@@ -1,0 +1,67 @@
+@import './variables';
+
+
+.mobile-header {
+    display        : flex;
+    justify-content: space-between;
+
+    padding: calc(var(--offset) * 4) 0;
+
+    &__title {
+        font-weight: bold;
+        font-size  : 18px;
+    }
+
+    &__user-block {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+    }
+
+    &__user-notifications-button {
+        border-radius: var(--border-radius);
+        border       : 1px solid $notif-border;
+        padding      : var(--offset) calc(var(--offset) * 2);
+        background   : transparent;
+
+        cursor: pointer;
+    }
+
+    &__user-notifications-button--active {
+        position: relative;
+
+        &::before {
+            border       : var(--offset) solid $background;
+            content      : "";
+            position     : absolute;
+            top          : calc(-1 * var(--offset));
+            right        : calc(-1 * var(--offset));
+            background   : $azure;
+            width        : calc(var(--offset) * 1.5);
+            height       : calc(var(--offset) * 1.5);
+            border-radius: 50%;
+        }
+    }
+
+
+
+
+    &__user-profile-block {
+        margin-left: calc(var(--offset) * 4);
+    }
+
+    &__user-settings-button {
+        border : none;
+        display: flex;
+        align-items: center;
+        background: $background;
+        cursor: pointer;
+    }
+
+    &__user-icon {
+        width           : 24px;
+        height          : 24px;
+        border-radius   : 50%;
+        background-color: $azure;
+    }
+}

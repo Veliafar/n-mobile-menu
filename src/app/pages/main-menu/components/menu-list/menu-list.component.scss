@@ -1,0 +1,6 @@
+@import './variables';
+
+.menu-list {
+    border-top: $border;
+    padding-top: calc( var(--offset) * 3);
+}

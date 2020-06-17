@@ -1,6 +1,12 @@
 # NomiaErp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+Необходимо реализовать "меню каталога" на Angular. Меню состоит из разделов и позиций.
+У каждого экрана должен быть свой route.
+При первой загрузке брать данные из menu.json
+Данные должны сохраняться в Local Storage.
+Над версткой можно особо не заморачиваться.
+
+Макет: https://www.figma.com/file/1GuJr8Skjd4ucxcfYKHMdy/ERP---menu?node-id=0%3A1
 
 ## Development server
 
