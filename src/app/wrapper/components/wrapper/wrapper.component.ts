@@ -13,7 +13,6 @@ export class WrapperComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.router.navigate(['/main-menu']);
   }
 
 }

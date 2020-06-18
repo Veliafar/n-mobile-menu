@@ -12,7 +12,7 @@ export class MainMenuHttpService {
   ) { }
 
 
-  getStaticListData(way: string): Observable<any> {
-    return this.httpService.get(way);
+  getStaticListData(link: string): Observable<any> {
+    return this.httpService.get(link);
   }
 }
