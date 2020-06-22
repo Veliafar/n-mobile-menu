@@ -4,14 +4,6 @@ NPM I
 
 NPM RUN START
 
-Необходимо реализовать "меню каталога" на Angular. Меню состоит из разделов и позиций.
-У каждого экрана должен быть свой route.
-При первой загрузке брать данные из menu.json
-Данные должны сохраняться в Local Storage.
-Над версткой можно особо не заморачиваться.
-
-Макет: https://www.figma.com/file/1GuJr8Skjd4ucxcfYKHMdy/ERP---menu?node-id=0%3A1
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
