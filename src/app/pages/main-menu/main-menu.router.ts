@@ -9,7 +9,7 @@ import {
 
 export const MainMenuRoutes: Routes = [
     {
-        path: '',
+        path: 'main-menu',
         component: MenuWrapperComponent,
         children: [
             {

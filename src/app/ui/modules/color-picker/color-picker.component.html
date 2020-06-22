@@ -1,0 +1,17 @@
+
+<div class="color-picker-group">
+    <ng-container *ngFor="let color of colors">
+        <label class="color-picker-button"
+            [class.active]='color.color === selectedValue'>
+            <input
+                (click)="onClick(color.color)"
+                [name]="name"
+                [value]="color.color"
+                type="radio">
+            <div class="color-picker"
+                [ngStyle]="{'background-color':color.color}">
+
+            </div>
+        </label>
+    </ng-container>
+</div>

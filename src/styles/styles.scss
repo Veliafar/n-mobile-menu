@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&display=swap');
 
-
 * {
     margin     : 0;
     padding    : 0;
@@ -11,10 +10,15 @@
 
 :root {
 
-    --offset: 4px;
+    --offset       : 4px;
     --border-radius: 6px;
 
 
     @import './variables/variables.scss';
-    @import './common/common.scss';
+    @import './dynamic-menu/dynamic-menu.scss';
+    @import './edit-list-page/edit-list-page.scss';
+    @import './buttons/buttons.scss';
+    @import './color-picker/color-picker.scss';
+
+    color: $font-color;
 }

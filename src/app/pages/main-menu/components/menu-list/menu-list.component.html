@@ -1,42 +1,18 @@
+<div class="menu-differ"></div>
 <div class="menu-list">
+
   <section class="menu-list__control">
-    <button class="menu-list__button">
+    <button class="menu-list__button" (click)="toAddSection()">
       <i></i>
       <span>Раздел</span>
     </button>
-    <button class="menu-list__button">
+    <button class="menu-list__button" (click)="toAddPosition()">
       <i></i>
       <span>Позиция</span>
     </button>
   </section>
-  <section class="menu-item-section">
 
-    <ul class="menu-item">
-      <li class="menu-item__block" #menuList *ngFor="let item of menu;"
-        (click)="toggleMenu(item)">
-        <div class="menu-item__title"> {{ item.name }} </div>
-
-        <ol *ngIf="item.opened">
-          <li *ngFor="let section of item.sections">
-            <span>{{ section.name }}</span>
-
-            <ul *ngIf="section.opened">
-              <li *ngFor="let position of section.items">
-                <div>
-                  <span>
-                    {{ position.name }}
-                  </span>
-                  <span>
-                    {{ position.sale }}
-                  </span>
-                </div>
-              </li>
-            </ul>
-
-          </li>
-        </ol>
-
-      </li>
-    </ul>
+  <section>
+    <dynamic-menu-list [menu]="menu"></dynamic-menu-list>
   </section>
 </div>

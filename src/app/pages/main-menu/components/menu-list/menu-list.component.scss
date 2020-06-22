@@ -1,12 +1,17 @@
 @import './variables';
 
+.menu-differ {
+    margin    : 0 calc(var(--offset) * 3);
+    border-top: $border;
+}
+
 .menu-list {
-    border-top : $border;
-    padding-top: calc(var(--offset) * 3);
-    font-size  : 14px;
+    padding  : calc(var(--offset) * 3) calc(var(--offset) * 3);
+    font-size: 14px;
 
     &__control {
-        display: flex;
+        display      : flex;
+        margin-bottom: calc(var(--offset) * 3);
     }
 
     &__button {
@@ -24,31 +29,4 @@
             margin-left: calc(var(--offset) * 3);
         }
     }
-}
-
-.menu-item-section {
-    padding: calc(var(--offset) * 3) 0;
-
-    .menu-item {
-
-
-        &__block {
-            &:not(:last-child) {
-                margin-bottom: calc(var(--offset) * 2);
-            }
-        }
-
-        &__title {
-            padding         : calc(var(--offset) * 2) calc(var(--offset) * 2);
-            // border : 1px solid black;
-            background-color: $meu-item-color;
-            border-radius   : var(--border-radius);
-        }
-    }
-}
-
-
-
-li {
-    list-style: none;
 }

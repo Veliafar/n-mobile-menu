@@ -1,0 +1,29 @@
+<div class="dynamic-context">
+    <button #toggleButton class="item-control-button item-control-menu"
+        (click)="openListItemContext(menuItem); $event.stopPropagation()">
+        <span>
+            :
+        </span>
+    </button>
+
+    <div class="dynamic-context__menu" *ngIf="isMenuOpen" #menu>
+        <ul class="dynamic-context__item-wrapper">
+            <li>
+                <span>+</span>
+                <span>Добавить позицию</span>
+            </li>
+            <li>
+                <span>+</span>
+                <span>Добавить раздел меню</span>
+            </li>
+            <li>
+                <span>/</span>
+                <span>Редактировать</span>
+            </li>
+            <li>
+                <span>-</span>
+                <span>Удалить</span>
+            </li>
+        </ul>
+    </div>
+</div>

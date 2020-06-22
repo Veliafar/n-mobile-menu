@@ -1,3 +1,29 @@
-<p>
-  add-menu-position works!
-</p>
+<div class="edit-list-page">
+  <div class="edit-list-page__header">
+    <span class="edit-list-page__title">
+      Добавить позицию
+    </span>
+    <button class="edit-list-page__cancel-button" (click)="toMenuList()">
+      Отмена
+    </button>
+  </div>
+  <div [formGroup]="editPositionForm" class="edit-list-page__form">
+    <div class="edit-list-page__form-control">
+      <label class="edit-list-page__label" for="name">Название</label>
+      <input class="edit-list-page__input" formControlName="name" type="text"
+        placeholder="Введите название
+        категории">
+    </div>
+    <div class="edit-list-page__form-control">
+      <label class="edit-list-page__label" for="sale">Цена</label>
+      <input class="edit-list-page__input" formControlName="sale" type="text"
+        placeholder="0 &#8381;">
+    </div>
+    <div>
+      <button class="nomia-button edit-list-page__save-button"
+        (click)="savePosition()" [disabled]="!editPositionForm.valid">
+        Сохранить
+      </button>
+    </div>
+  </div>
+</div>

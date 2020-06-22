@@ -7,6 +7,11 @@ import { AddMenuPositionComponent } from './components/add-menu-position/add-men
 import { RouterModule } from '@angular/router';
 import { MainMenuRoutes } from './main-menu.router';
 import { MenuHeaderComponent } from './components/menu-header/menu-header.component';
+import { UiModule } from '@app/ui/ui.module';
+import { SharedModule } from '@app/shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -18,7 +23,11 @@ import { MenuHeaderComponent } from './components/menu-header/menu-header.compon
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forChild(MainMenuRoutes),
+    UiModule,
+    SharedModule
   ]
 })
 export class MainMenuModule { }

@@ -1,0 +1,40 @@
+.color-picker-group {
+
+    display  : flex;
+    flex-wrap: wrap;
+
+    & input[type="radio"] {
+        display: none;
+    }
+
+    .active {
+        background-color: $font-color;
+    }
+
+
+    .color-picker-button {
+        display: flex;
+
+        justify-content: center;
+        align-items    : center;
+
+        border-radius: 6px;
+
+        width : 66px;
+        height: 48px;
+
+
+        &:hover {
+            background-color: $font-color;
+            cursor          : pointer;
+        }
+
+
+        .color-picker {
+            width        : 24px;
+            height       : 24px;
+            border-radius: 50%;
+            border       : 2px solid $light-bg;
+        }
+    }
+}

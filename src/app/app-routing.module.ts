@@ -17,7 +17,7 @@ export class LazyRoutePreloadingStrategy implements PreloadingStrategy {
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => MainMenuModule
+    loadChildren: './pages/main-menu/main-menu.module#MainMenuModule'
   },
   {
     path: '**',

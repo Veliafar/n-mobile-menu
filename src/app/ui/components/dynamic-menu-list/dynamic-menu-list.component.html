@@ -1,0 +1,52 @@
+
+<div class="menu-item-section">
+
+    <ul class="menu-item">
+        <li class="menu-item__block"
+            #menuList *ngFor="let item of menu;">
+
+            <div class="menu-item__title" 
+                [class.menu-item__title--active]="item.sections.length ||
+                item.items.length">
+
+                <button (click)="toggleMenu(item)"
+                    class="item-control-button">
+                    <span *ngIf="(item.sections.length || item.items.length) &&
+                        !item.opened">
+                        >
+                    </span>
+                    <span *ngIf="(item.sections.length || item.items.length) &&
+                        item.opened">
+                        \/
+                    </span>
+                </button>
+
+                <dynamic-context-menu [menuItem]="item"></dynamic-context-menu>
+
+                <span>{{ item.name }}</span>
+            </div>
+
+            <ol *ngIf="item.opened" class="menu-inner-level">
+
+                <dynamic-menu-list [menu]="item.sections"></dynamic-menu-list>
+            </ol>
+
+            <ol *ngIf="item.opened && item.items?.length"
+                class="menu-position-list">
+                <li *ngFor="let position of item.items"
+                    class="menu-position-item">
+
+                    <dynamic-context-menu [menuItem]="item"></dynamic-context-menu>
+
+                    <div class="menu-position-item__info">
+                        <span>{{ position.name }}</span>
+                        <span>{{ position.sale }} &#8381; </span>
+                    </div>
+
+                </li>
+            </ol>
+
+        </li>
+    </ul>
+
+</div>

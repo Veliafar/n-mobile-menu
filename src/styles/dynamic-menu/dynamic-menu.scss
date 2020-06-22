@@ -1,0 +1,121 @@
+ol,
+ul,
+li {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+$menu-item-offset: 3%;
+
+@mixin list-item {
+    display         : flex;
+    align-items     : center;
+    align-self      : flex-end;
+    padding         : calc(var(--offset) * 2) calc(var(--offset) * 2);
+    background-color: $light-bg;
+    border-radius   : var(--border-radius);
+
+    &--active {
+        cursor: pointer;
+    }
+}
+
+@mixin list-item-margin {
+    &:first-child {
+        margin-top: calc(var(--offset) * 2);
+    }
+
+    &:not(:last-child) {
+        margin-bottom: calc(var(--offset) * 2);
+    }
+}
+
+
+.menu-item-section {
+    .menu-item {
+
+        &__block {
+            @include list-item-margin;
+        }
+
+        &__title {
+            @include list-item;
+        }
+    }
+}
+
+.menu-inner-level {
+
+    .menu-item-section {
+        margin-left: $menu-item-offset;
+    }
+}
+
+.menu-position-list {
+    margin-left: $menu-item-offset;
+
+    .menu-position-item {
+
+        @include list-item;
+
+        @include list-item-margin;
+
+        &__info {
+            display        : flex;
+            justify-content: space-between;
+            align-items    : center;
+            flex           : 1;
+        }
+    }
+}
+
+.item-control-button {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    border         : none;
+    background     : transparent;
+    width          : calc(var(--offset) * 4);
+    height         : calc(var(--offset) * 4);
+
+    cursor: pointer;
+
+    &.item-control-menu {
+
+
+        &:hover {
+            border-radius   : 50%;
+            background-color: $azure;
+        }
+    }
+}
+
+
+
+
+.dynamic-context {
+    position: relative;
+
+    color: $font-color;
+
+    &__menu {
+        position        : absolute;
+        top             : calc(var(--offset) * 7);
+        z-index         : 2;
+        border-radius   : var(--border-radius);
+        background-color: $context-menu-color;
+        padding         : calc(var(--offset) / 2) calc(var(--offset) * 3);
+        width           : 80vw;
+        max-width       : 320px;
+        box-shadow      : $modal-box-shadow;
+
+    }
+
+    &__item-wrapper>li {
+        margin: calc(var(--offset) * 2) 0;
+
+    }
+}
